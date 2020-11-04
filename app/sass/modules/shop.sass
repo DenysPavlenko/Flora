@@ -1,0 +1,34 @@
+/* Shop Styles */
+.shop
+	&__heading
+		+col(12)
+		margin-bottom: 50px
+	&__col
+		+col(6)
+	&__image
+		margin-bottom: 38px
+	&__sup-title
+		margin-bottom: 20px
+	&__title
+		margin-bottom: 28px
+	&__price
+		margin-bottom: 20px
+		&-old
+			margin-right: 10px
+	&__text
+		margin-bottom: 61px
+
+
++media($breakpoint-lg)
+	/* Shop Styles */
+	.shop
+		&__col
+			+col(12)
+			&:not(:last-child)
+				margin-bottom: 60px
+
++media($breakpoint-xs)
+	/* Shop Styles */
+	.shop
+		&__heading
+			margin-bottom: 36px

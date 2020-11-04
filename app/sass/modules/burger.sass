@@ -1,0 +1,33 @@
+/* Burger styles */
+.burger
+	width: 28px
+	height: 17px
+	cursor: pointer
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	&:hover
+		.burger__brick
+			opacity: 0.4
+	&__brick
+		position: relative
+		height: 3px
+		background-color: $color-alpha
+		transition: 0.2s all
+		width: 100%
+	&--is-active
+		.burger__brick:first-child
+			top: 7px
+			transform: rotate(405deg)
+		.burger__brick:last-child
+			top: -7px
+			transform: rotate(-405deg)
+		.burger__brick--middle
+			transform: scale(0)
+
++media($breakpoint-xl)
+	/* Burger styles */
+	.burger
+		&:hover
+			.burger__brick
+				opacity: 1

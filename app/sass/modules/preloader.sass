@@ -1,0 +1,34 @@
+/* Preloader styles */
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	overflow: hidden !important
+	width: 100%
+	background-color: $color-beta
+	text-align: center
+	z-index: 999
+.cssload-container
+	width: 100%
+	height: 100%
+	text-align: center
+	position: relative
+.cssload-tube-tunnel
+	position: relative
+	top: 38%
+	width: 138px
+	height: 138px
+	margin: 0 auto
+	border: 11px solid
+	border-radius: 50%
+	border-color: $color-zeta
+	animation: cssload-scale 1575ms infinite linear
+@keyframes cssload-scale
+	0%
+		transform: scale(0)
+	90%
+		transform: scale(0.7)
+	100%
+		transform: scale(1)

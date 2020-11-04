@@ -1,0 +1,46 @@
+/* Event Styles */
+.event
+	&__wrapper
+		position: relative
+	&__image
+		position: absolute
+		overflow: hidden
+		width: 49%
+		height: 100%
+		right: 0
+		top: 0
+	&__col
+		+col(6)
+	&__heading
+		margin-bottom: 88px
+	&__date
+		margin-bottom: 16px
+	&__title
+		margin-bottom: 12px
+	&__picked
+		margin-bottom: 12px
+	&__text
+		margin-bottom: 34px
+
+
++media($breakpoint-lg)
+	/* Event styles */
+	.event
+		&__image
+			position: relative
+			width: 100%
+			height: 360px
+			margin-bottom: 60px
+		&__heading
+			margin-bottom: 51px
+		&__col
+			+col(12)
+
++media($breakpoint-xs)
+	/* Event styles */
+	.event
+		&__image
+			margin-bottom: 40px
+			margin-top: -4px
+		&__heading
+			margin-bottom: 36px

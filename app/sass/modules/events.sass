@@ -1,0 +1,72 @@
+/* Events styles */
+.events
+	&__heading
+		+col(12)
+		margin-bottom: 51px
+	&__col
+		+col(6)
+		display: flex
+		flex-direction: column
+		&:first-child
+			align-items: flex-end
+			.events__text-wrap
+				padding-left: 15px
+		&:last-child
+			color: $text-beta
+			background-color: $color-delta
+			.events__text-wrap
+				padding-left: 100px
+				padding-right: 15px
+	&__image
+		position: relative
+		width: 100%
+		height: 360px
+		overflow: hidden
+		margin-bottom: 77px
+	&__text-wrap
+		width: 100%
+		max-width: calc(#{$container-xxl} / 2 - 15px)
+	&__date
+		margin-bottom: 15px
+	&__title
+		margin-bottom: 15px
+	&__text
+		margin-bottom: 61px
+	&__button
+		margin-bottom: 80px
+
+
++media($breakpoint-xxl)
+	/* Events styles */
+	.events
+		&__col
+			+col(6)
+			&:last-child
+				.events__text-wrap
+					padding-left: 50px
+
++media($breakpoint-lg)
+	/* Events styles */
+	.events
+		&__col
+			+col(12)
+			align-items: center
+			&:first-child
+				align-items: center
+				.events__text-wrap
+					padding-right: 15px
+			&:last-child
+				.events__text-wrap
+					padding-left: 15px
+		&__image
+			margin-bottom: 60px
+		&__text-wrap
+			max-width: $container-md
+
++media($breakpoint-xs)
+	/* Events styles */
+	.events
+		&__image
+			margin-bottom: 40px
+		&__heading
+			margin-bottom: 36px

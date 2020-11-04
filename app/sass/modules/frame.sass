@@ -1,0 +1,101 @@
+/* Frame */
+.frame
+	&__top,
+	&__right,
+	&__bottom,
+	&__left
+		position: fixed
+		content: ''
+		background-color: $color-beta
+		z-index: 30
+	&__top,
+	&__bottom
+		width: 100%
+		height: 40px
+	&__right,
+	&__left
+		width: 40px
+		height: 100%
+		transition: all .3s
+	&--is-active
+		.frame__right,
+		.frame__left
+			width: 55%
+	&__top
+		top: 0
+		left: 0
+	&__right
+		top: 0
+		right: 0
+	&__bottom
+		bottom: 0
+		left: 0
+	&__left
+		top: 0
+		left: 0
+	// Header
+	&__header
+		position: fixed
+		display: flex
+		align-items: center
+		top: 0
+		left: 0
+		width: 100%
+		height: 40px
+		z-index: 50
+	&__logo
+		margin-left: 40px
+		img
+			display: block
+	&__burger
+		position: relative
+		margin-left:  auto
+		margin-right: 40px
+	// Footer
+	&__footer
+		position: fixed
+		display: flex
+		align-items: center
+		height: 40px
+		width: 100%
+		bottom: 0
+		left: 0
+		z-index: 50
+	&__socials
+		position: relative
+		margin-left: auto
+		margin-right: 40px
+
+
++media($breakpoint-xl)
+	/* Frame styles */
+	.frame
+		&__left
+			width: 0
+		&__right
+			width: 0
+		&__top,
+			height: 60px
+		&__header
+			height: 60px
+		&__header,
+		&__footer
+			max-width: $container-lg
+			left: 50%
+			transform: translateX(-50%)
+			background-color: $color-beta
+		&__logo
+			margin-left: 15px
+		&__burger
+			margin-right: 15px
+		&__socials
+			margin-right: 15px
+
++media($breakpoint-lg)
+	/* Frame styles */
+	.frame
+		&__header,
+		&__footer
+			max-width: $container-md
+			left: 50%
+			transform: translateX(-50%)

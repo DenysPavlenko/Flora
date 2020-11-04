@@ -1,0 +1,24 @@
+/* Section */
+.section
+	padding-top: 160px
+	&__heading
+		position: relative
+		padding-top: 32px
+		&:after
+			position: absolute
+			content: ''
+			width: 70px
+			height: 15px
+			top: 0
+			left: 0
+			background-color: $color-gamma
+
++media($breakpoint-md)
+	/* Section */
+	.section
+		padding-top: 120px
+
++media($breakpoint-xs)
+	/* Section */
+	.section
+		padding-top: 80px

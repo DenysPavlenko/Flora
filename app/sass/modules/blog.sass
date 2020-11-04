@@ -1,0 +1,57 @@
+/* Blog styles */
+.blog
+	&__col
+		position: relative
+		+col(6)
+		overflow: hidden
+		color: $text-beta
+	&__content
+		padding: 39px
+	&__image
+		transition: all 0.3s
+		&--hovered
+			transform: translate(-50%, -50%) scale(1.1)
+	&__text
+		position: relative
+		border: 10px solid $color-gamma
+		padding: 65px 50px 69px 50px
+		z-index: 2
+	&__title
+		margin-bottom: 20px
+
+
++media($breakpoint-xxl)
+	/* Blog styles */
+	.blog
+		&__content
+			padding: 20px
+		&__text
+			padding: 65px 20px 69px 20px
+
++media($breakpoint-lg)
+	/* Blog styles */
+	.blog
+		&__col
+			+col(12)
+			&:not(:last-child)
+				margin-bottom: 60px
+
++media($breakpoint-xs)
+	/* Blog styles */
+	.blog
+		&__col
+			&:not(:last-child)
+				margin-bottom: 40px
+		&__content
+			padding: 15px
+		&__text
+			border: 5px solid $color-gamma
+			padding: 50px 15px 54px 15px
+
++media($breakpoint-xxs)
+	/* Blog styles */
+	.blog
+		&__content
+			padding: 15px
+		&__text
+			padding: 50px 15px 54px 15px

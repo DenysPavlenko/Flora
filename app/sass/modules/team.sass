@@ -1,0 +1,30 @@
+/* Team styles */
+.team
+	&__heading
+		+col(12)
+		margin-bottom: 51px
+	&__col
+		+col(4)
+	&__image
+		margin-bottom: 36px
+	&__sup-title
+		margin-bottom: 22px
+	&__title
+		margin-bottom: 21px
+	&__socials
+		margin-bottom: 9px
+
+
++media($breakpoint-lg)
+	/* Team styles */
+	.team
+		&__col
+			+col(12)
+			&:not(:last-child)
+				margin-bottom: 60px
+
++media($breakpoint-xs)
+	/* Team styles */
+	.team
+		&__heading
+			margin-bottom: 37px

@@ -1,0 +1,59 @@
+/* Skills Styles */
+.skills
+	&__col
+		+col(4)
+	&__content
+		position: relative
+		padding: 40px
+		overflow: hidden
+		&:hover
+			.skills__image
+				transform: translate(-50%, -50%) scale(1.1)
+	&__image
+		transition: all 0.3s
+	&__text
+		color: $text-beta
+		position: relative
+		border: 10px solid $color-gamma
+		padding: 66px 40px 66px 40px
+		z-index: 2
+	&__number
+		margin-bottom: 9px
+
+
++media($breakpoint-xxl)
+	/* Skills Styles */
+	.skills
+		&__content
+			padding: 20px
+		&__text
+			padding: 66px 20px 66px 20px
+
+
++media($breakpoint-lg)
+	/* Skills Styles */
+	.skills
+		.row
+			justify-content: center
+		&__col
+			+col(6)
+			&:not(:last-child)
+				margin-bottom: 60px
+
++media($breakpoint-md)
+	/* Skills Styles */
+	.skills
+		&__col
+			+col(12)
+
++media($breakpoint-xs)
+	/* Skills Styles */
+	.skills
+		&__content
+			padding: 15px
+		&__text
+			padding: 55px 15px 55px 15px
+			border: 5px solid $color-gamma
+		&__col
+			&:not(:last-child)
+				margin-bottom: 40px

@@ -1,0 +1,49 @@
+/* Contacts Styles */
+.contacts
+	&__wrapper
+		position: relative
+	&__map
+		position: absolute
+		overflow: hidden
+		right: 0
+		top: 0
+		width: 49%
+		height: 100%
+		background-color: #1d2c4d
+		#map
+			width: 100%
+			height: 100%
+	&__col
+		+col(6)
+		padding-bottom: 13px
+	&__heading
+		margin-bottom: 87px
+	&__content
+		&:not(:last-child)
+			margin-bottom: 29px
+	&__sup-title
+		margin-bottom: 13px
+
++media($breakpoint-lg)
+	/* Contacts Styles */
+	.contacts
+		&__map
+			position: relative
+			overflow: hidden
+			right: 0
+			top: 0
+			width: 100%
+			height: 400px
+			margin-bottom: 60px
+		&__heading
+			margin-bottom: 51px
+		&__col
+			+col(12)
+
++media($breakpoint-xs)
+	/* Contacts Styles */
+	.contacts
+		&__map
+			margin-bottom: 40px
+		&__heading
+			margin-bottom: 36px

@@ -1,0 +1,51 @@
+/* Navigation */
+.navigation
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	height: 100%
+	display: none
+	z-index: 40
+	&--is-active
+		display: block
+	.row
+		display: flex
+		align-items: center
+		height: 100vh
+	&__list
+		+col(12)
+		padding: 100px 0
+		display: inline-block
+		overflow: hidden
+	&__list-item
+		overflow: hidden
+		&:not(:last-child)
+			margin-bottom: 10px
+	&__link
+		position: relative
+		top: 30px
+		color: $text-alpha
+		transition: 0.4s
+		user-select: none
+		&--is-showed
+			top: 0
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			height: 12px
+			margin-top: -1px
+			z-index: -1
+			background-color: $color-gamma
+			width: 100%
+			left: -100%
+			transition: 0.3s
+		&:hover
+			&:before
+				left: 0
+		&--active
+			&:before
+				left: 0

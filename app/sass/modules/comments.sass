@@ -1,0 +1,64 @@
+/* Comments styles */
+.comments
+	margin-top: 160px
+	padding-bottom: 152px
+	background:
+		size: cover
+		position: center
+		repeat: no-repeat
+		attachment: fixed
+	.row
+		position: relative
+		justify-content: center
+		z-index: 2
+	&__col
+		+col(6)
+		color: $text-beta
+		text-align: center
+	&__text
+		position: relative
+		margin-top: 118px
+		padding-top: 59px
+		margin-bottom: 29px
+		&:before
+			position: absolute
+			content: '“'
+			width: 100%
+			text-align: center
+			top: 0
+			left: 0
+			height: 25px
+			overflow: hidden
+			font-size: rem(80px)
+			line-height: rem(91px)
+			font-weight: 700
+			color: $text-beta
+
+
++media($breakpoint-xl)
+	/* Comments styles */
+	.comments
+		&__col
+			+col(10)
+
++media($breakpoint-lg)
+	/* Comments styles */
+	.comments
+		&__col
+			+col(12)
+
++media($breakpoint-md)
+	/* Comments styles */
+	.comments
+		margin-top: 120px
+
++media($breakpoint-xs)
+	/* Comments styles */
+	.comments
+		margin-top: 80px
+
+
+@media (pointer: coarse)
+	/* Header styles */
+	.comments
+		background-attachment: scroll

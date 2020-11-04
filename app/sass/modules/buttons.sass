@@ -1,0 +1,41 @@
+/* Button */
+.button
+	padding: 18px 20px 16px 20px
+	text-align: center
+	min-width: 130px
+	border-radius: 25px
+	color: $text-alpha
+	border: 2px solid $button-color
+	background-color: $button-color
+	transition: .2s all
+	display: inline-block
+	color: $button-text
+	&:focus
+		color: $button-text
+	&:hover
+		background-color: transparent
+		color: $button-text-hover
+	&--secondary
+		background-color: $button-secondary-color
+		border: 2px solid $button-secondary-color
+		color: $text-beta
+	&--text-secondary
+		&:focus
+			color: $text-beta
+		&:hover
+			color: $button-secondary-hover
+
+/* Button underlined */
+.button-underlined
+	padding-bottom: 3px
+	border-bottom: 1px solid $text-alpha
+	color: $text-alpha
+	display: inline-block
+	transition: 0.2s
+	&:focus
+		color: $text-alpha
+	&:hover
+		opacity: 0.5
+	&--white
+		border-bottom: 1px solid $text-beta
+		color: $text-beta

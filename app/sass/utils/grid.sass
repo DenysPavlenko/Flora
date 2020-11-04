@@ -1,0 +1,34 @@
+// Defaults
+$columns        : 12
+$gutter         : 30px
+$gutter-one-side: ($gutter / 2)
+$col-width      : (100% / $columns)
+
+// Row
+@mixin row-flex()
+	display: flex
+	flex-wrap: wrap
+	margin-left: -$gutter-one-side
+	margin-right: -$gutter-one-side
+
+// Col
+@mixin col($n, $offset-left:0)
+	// Calc width
+	$n-col-width: ($n * $col-width)
+	width: calc(#{$n-col-width} - #{$gutter})
+	// Calc offset-left
+	@if $offset-left > 0
+		$offs: ($offset-left / $columns * 100%)
+		margin-left: calc(#{$offs} + 15px)
+	// Regular margin
+	@else
+		margin-left: $gutter-one-side
+	margin-right: $gutter-one-side
+
+// Col-padding
+@mixin col-padding($n)
+	// Calc width
+	$n-col-width: ($n * $col-width)
+	width: #{$n-col-width}
+	padding-left: $gutter-one-side
+	padding-right: $gutter-one-side

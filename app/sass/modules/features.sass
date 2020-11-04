@@ -1,0 +1,33 @@
+/* Features styles */
+.features
+	&__col
+		+col(3)
+	&__icon
+		margin-bottom: 31px
+	&__title
+		margin-bottom: 17px
+	&__text
+		margin-bottom: 48px
+
++media($breakpoint-xl)
+	/* Features styles */
+	.features
+		margin-bottom: -60px
+		&__col
+			+col(6)
+			margin-bottom: 60px
+		&__icon
+			margin-bottom: 31px
+		&__title
+			margin-bottom: 17px
+		&__text
+			margin-bottom: 48px
+
+
++media($breakpoint-md)
+	/* Features styles */
+	.features
+		&__col
+			+col(12)
+		&__text
+			margin-bottom: 28px

@@ -1,0 +1,37 @@
+/* Header styles */
+.header
+	color: $text-beta
+	background:
+		image: url('../images/header-bg.jpg')
+		size: cover
+		position: center
+		attachment: fixed
+	.row
+		position: relative
+		min-height: 100vh
+		height: 100%
+		align-items: center
+		z-index: 2
+		&:after
+			content: ''
+			min-height: inherit
+			height: 0
+	&__info
+		+col(6)
+		padding: 120px 0
+	&__date
+		margin-bottom: 56px
+	&__title
+		margin-bottom: 62px
+
++media($breakpoint-lg)
+	/* Header styles */
+	.header
+		&__info
+			+col(12)
+			padding: 120px 0
+
+@media (pointer: coarse)
+	/* Header styles */
+	.header
+		background-attachment: scroll

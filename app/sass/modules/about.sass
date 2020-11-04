@@ -1,0 +1,64 @@
+/* About styles */
+.about
+	&__item
+		&:nth-child(1),
+		&:nth-child(2),
+			+col(3)
+		&:nth-child(3)
+			+col(6)
+	&__image-wrap
+		position: relative
+		height: 100%
+		overflow: hidden
+	&__text
+		+row-flex()
+		margin-top: -4px
+		margin-bottom: 57px
+		p
+			+col(6)
+	&__button
+		margin-bottom: 54px
+
++media($breakpoint-xxl)
+	/* About styles */
+	.about
+		&__item
+			&:nth-child(1)
+				margin-bottom: 51px
+				+col(12)
+			&:nth-child(2),
+				+col(4)
+			&:nth-child(3)
+				+col(8)
+
++media($breakpoint-lg)
+	/* About styles */
+	.about
+		&__image-wrap
+			height: 320px
+			margin-bottom: 60px
+		&__item
+			&:nth-child(2)
+				+col(12)
+			&:nth-child(3)
+				+col(12)
+		&__button
+			margin-bottom: 0
+
++media($breakpoint-sm)
+	/* About styles */
+	.about
+		&__text
+			p
+				+col(12)
+
++media($breakpoint-xs)
+	/* About styles */
+	.about
+		&__item
+			&:nth-child(1)
+				margin-bottom: 36px
+		&__image-wrap
+			margin-bottom: 40px
+		&__text
+			margin-bottom: 37px

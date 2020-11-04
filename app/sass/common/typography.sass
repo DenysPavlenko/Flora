@@ -1,0 +1,118 @@
+/* Typography styles */
+html, body
+	font-family: 'Poppins', sans-serif
+	font-size: $base-font
+	text-align: left
+	font-weight: 400
+	color: $text-alpha
+input, select, textarea, button
+	font-family: inherit
+// Titles
+h1, .h1
+	font-size: rem(90px)
+	line-height: rem(90px)
+	letter-spacing: 0.075em
+	text-transform: uppercase
+	font-weight: 700
+h2, .h2
+	font-size: rem(60px)
+	line-height: rem(60px)
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	font-weight: 700
+h3, .h3
+	font-size: rem(24px)
+	line-height: rem(29px)
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	font-weight: 700
+h4, .h4
+	font-size: rem(16px)
+	line-height: rem(16px)
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	font-weight: 400
+// paragraphs
+p, .p
+	font-size: rem(14px)
+	line-height: rem(23px)
+	font-weight: 400
+p.p--picked
+	font-size: rem(18px)
+	line-height: rem(23px)
+	letter-spacing: 0.1em
+	font-weight: 400
+// Misc
+.button
+	font-size: rem(13px)
+	line-height: rem(13px)
+	letter-spacing: 0.05em
+	font-weight: 600
+	text-transform: uppercase
+.button-underlined
+	font-size: rem(14px)
+	line-height: rem(14px)
+	font-weight: 700
+.skills__number
+	display: inline-block
+	font-size: rem(45px)
+	line-height: rem(45px)
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	font-weight: 700
+.price
+	display: inline-block
+	font-size: rem(30px)
+	line-height: rem(30px)
+	text-transform: uppercase
+	font-weight: 700
+	&--old
+		text-decoration: line-through
+		color: $text-epsilon
+		font-weight: 400
+.yellow-dot
+	color: $text-delta
+
+
++media($breakpoint-sm)
+	/* Typography styles */
+	html, body
+		font-size: 13px
+
++media($breakpoint-xs)
+	/* Typography styles */
+	// Titles
+	h1, .h1
+		font-size: rem(65px)
+		line-height: rem(65px)
+		letter-spacing: 0.05em
+	h2, .h2
+		font-size: rem(50px)
+		line-height: rem(50px)
+		letter-spacing: 0.05em
+	h3, .h3
+		font-size: rem(20px)
+		line-height: rem(25px)
+		letter-spacing: 0.05em
+	h4, .h4
+		font-size: rem(15px)
+		line-height: rem(15px)
+	p.p--picked
+		font-size: rem(17px)
+		line-height: rem(22px)
+		letter-spacing: 0.05em
+		font-weight: 400
+
++media($breakpoint-xxs)
+	/* Typography styles */
+	// Titles
+	h1, .h1
+		font-size: rem(60px)
+		line-height: rem(60px)
+	h2, .h2
+		font-size: rem(45px)
+		line-height: rem(45px)
+	p.p--picked
+		font-size: rem(16px)
+		line-height: rem(21px)
+		font-weight: 400

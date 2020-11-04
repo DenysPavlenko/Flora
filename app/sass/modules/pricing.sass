@@ -1,0 +1,68 @@
+/* Pricing styles */
+.pricing
+	&__col
+		position: relative
+		+col(4)
+		overflow: hidden
+		color: $text-beta
+	&__content
+		padding: 40px
+		&--green
+			background-color: $color-zeta
+		&--blue
+			background-color: $color-delta
+		&--red
+			background-color: $color-epsilon
+	&__image
+		transition: all 0.3s
+		&--hovered
+			transform: translate(-50%, -50%) scale(1.1)
+	&__info
+		position: relative
+		border: 10px solid $color-gamma
+		padding: 49px 50px 60px 50px
+		z-index: 2
+	&__title
+		margin-bottom: 20px
+	&__price
+		margin-bottom: 15px
+	&__text
+		line-height: rem(30px)
+		margin-bottom: 47px
+
+
++media($breakpoint-xxl)
+	/* Pricing styles */
+	.pricing
+		&__content
+			padding: 20px
+		&__info
+			padding: 49px 20px 60px 20px
+
++media($breakpoint-lg)
+	/* Pricing styles */
+	.pricing
+		.row
+			justify-content: center
+		&__col
+			+col(6)
+			&:not(:last-child)
+				margin-bottom: 60px
+
++media($breakpoint-md)
+	/* Pricing styles */
+	.pricing
+		&__col
+			+col(12)
+
++media($breakpoint-xs)
+	/* Pricing styles */
+	.pricing
+		&__col
+			&:not(:last-child)
+				margin-bottom: 40px
+		&__content
+			padding: 15px
+		&__info
+			padding: 40px 15px 43px 15px
+			border: 5px solid $color-gamma

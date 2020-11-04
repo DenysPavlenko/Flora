@@ -1,0 +1,91 @@
+/* Portfolio */
+.portfolio
+	margin-top: 40px
+	position: relative
+	z-index: 1
+	.container
+		position: relative
+		z-index: 1
+	.row
+		position: relative
+		padding-bottom: 40px
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			z-index: -1
+			height: 100%
+		&:before
+			top: -80px
+			right: 76.3%
+			background-color: $color-delta
+			width: 100vw
+			max-height: 81%
+		&:after
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			+col(8)
+			margin: 0
+			background-color: $color-zeta
+	&__col
+		&:first-child
+			+col(4)
+		&:last-child
+			+col(8)
+	&__inner-row
+		+row-flex()
+	&__inner-col
+		+col(6)
+	&__image-wrap
+		overflow: hidden
+		margin-bottom: 40px
+		&:hover
+			.portfolio__image
+				transform: scale(1.1)
+	&__image
+		transition: all 0.3s
+
++media($breakpoint-lg)
+	/* Portfolio styles */
+	.portfolio
+		margin-top: 80px
+		.row
+			&:before
+				right: 50%
+			&:after
+				top: 0
+				left: 50%
+				transform: none
+				width: 100vw
+		&__col
+			&:first-child
+				+col(12)
+				.portfolio__image-wrap
+					position: relative
+					overflow: hidden
+					height: 320px
+					img
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						width: auto
+						min-width: 100%
+						min-height: 100%
+			&:last-child
+				+col(12)
+		&__image-wrap
+			margin-bottom: 60px
+
++media($breakpoint-xs)
+	/* Portfolio styles */
+	.portfolio
+		&__col
+			&:first-child
+				.portfolio__image-wrap
+					height: 280px
+		&__image-wrap
+			margin-bottom: 40px
+		&__inner-col
+			+col(12)
